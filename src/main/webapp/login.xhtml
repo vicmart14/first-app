@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+	<h:outputStylesheet library="css" name="style.css" />
+	</h:head>
+
+		<h:body>
+			<h:outputLabel value="Bienvenido al login. . ."></h:outputLabel>
+			<h:form id="formLogin">
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Usuario: *" styleClass="colorText"/>
+					<h:inputText id="txtUser" value="#{loginController.usuario}" required="true" requiredMessage="El usuario es requerido"/>
+					<h:outputLabel value="Password: *" styleClass="colorText"/>
+					<h:inputSecret id="txtPass" value="#{loginController.password}" required="true" requiredMessage="El password es requerido"/>
+					<h:commandButton value="Entrar" action="#{loginController.ingresar}"/>
+				</h:panelGrid>	
+			</h:form>
+		</h:body>
+	
+</html>
